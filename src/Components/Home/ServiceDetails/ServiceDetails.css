@@ -1,0 +1,12 @@
+.services-icons{
+    width: 70px !important;
+}
+.services-cards{
+   transition: 0.3s;
+   padding:2em 0em;
+}
+.services-cards:hover{
+    border: 0;
+    box-shadow: 2px 2px 10px 0px black;
+    cursor: pointer;
+}

@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Karantina&display=swap');
+
+.header-main{
+    padding: 0.3em;
+    display: flex;
+    align-items: center;
+}
+.header-detail{
+    border-radius: 40px 0px 0px 10px;
+}
+.header-detaild-heading{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+/* if the window is less then 1090 px */
+@media only screen and (max-width: 1090px) {
+    .header-detaild-heading{
+       font-size: 2.3em;
+    }
+      }
+/* if the window is less then 895 px */
+@media only screen and (max-width: 895px) {
+.header-detaild-heading{
+    font-size: 1.3em;
+}
+    }
+/* if the window is less then 770 px */
+@media only screen and (max-width: 770px) {
+.header-detail{
+    border-radius: 0px;
+}
+.header-detaild-heading{
+    font-size: 50px;
+}
+  }
+  
