@@ -9,7 +9,10 @@ import Login from './Components/Login/Login';
 import { createContext, useState } from 'react';
 import Dashobard from './Components/Dashboard/Dashboard/Dashobard';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute'
-import Orders from './Components/Orders/Orders/Orders';
+import Booking from './Components/Bookings/Bookings/Booking';
+import AllBokings from './Components/Bookings/AllBokings/AllBokings';
+import Reviews from './Components/Bookings/Reviews/Reviews';
+
 
 export const userContext = createContext();
 
@@ -33,9 +36,15 @@ const[user,setUser] = useState({
           <PrivateRoute path="/dashboard">
               <Dashobard></Dashobard>
           </PrivateRoute>
-          <PrivateRoute path="/orders">
-            <Orders></Orders>
-          </PrivateRoute>
+          <Route path="/booking">
+            <Booking></Booking>
+          </Route>
+          <Route path="/allbokings">
+            <AllBokings></AllBokings>
+          </Route>
+          <Route path="/reviews">
+              <Reviews></Reviews>
+          </Route>
          <Route path="/login">
            <Login></Login>
          </Route>

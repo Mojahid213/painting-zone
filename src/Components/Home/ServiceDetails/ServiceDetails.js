@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useHistory } from "react-router";
+import { userContext } from "../../../App";
 import "./ServiceDetails.css";
 
 const ServiceDetails = ({ service }) => {
   let history = useHistory();
-
+  //context api
+  const[theUser,setTheUser] = useContext(userContext);
 
   //services cards click event
   const handleOrders = () =>{
-    history.push('/orders');
+    history.push('/booking');
+    const newDetail = {...theUser};
+    newDetail.serviceName = service.title;
+    newDetail.servicePrice = service.price;
+    setTheUser(newDetail)
   }
   return (
     <div className="col">
