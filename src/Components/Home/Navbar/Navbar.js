@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import {useHistory} from "react-router-dom"
+import { userContext } from "../../../App";
 
 const Navbar = () => {
   let history = useHistory();
   const handleLoginBtn = () =>{
       history.push("/login")
   }
-
+  // context api 
+  const[user,setUser] = useContext(userContext);
 
   return (
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -40,9 +42,15 @@ const Navbar = () => {
             <Link class="nav-link text-dark text-center" to="/#">
               Contact
             </Link>
-            <button onClick={handleLoginBtn} className="btn btn-success">
-                Login
+
+            {user.isSignedIn ?
+             <Link class="nav-link text-dark text-center" to="/dashboard">
+             Dashboard
+           </Link>
+            :<button onClick={handleLoginBtn} className="btn btn-success">
+            Login
             </button>
+            }
           </div>
         </div>
       </div>
