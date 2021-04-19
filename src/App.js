@@ -5,7 +5,7 @@ import {
   Route,
 } from "react-router-dom";
 import Home from './Components/Home/Home/Home';
-import Login from './Components/Home/Login/Login';
+import Login from './Components/Login/Login';
 
 
 
