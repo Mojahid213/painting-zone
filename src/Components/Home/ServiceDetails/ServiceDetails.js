@@ -12,8 +12,8 @@ const ServiceDetails = ({ service }) => {
   const handleOrders = () =>{
     history.push('/booking');
     const newDetail = {...theUser};
-    newDetail.serviceName = service.title;
-    newDetail.servicePrice = service.price;
+    newDetail.serviceName = service.srName;
+    newDetail.servicePrice = service.srPrice;
     setTheUser(newDetail)
   }
   return (
@@ -21,16 +21,16 @@ const ServiceDetails = ({ service }) => {
       <div onClick={handleOrders} className="card h-100 services-cards">
         <div>
           <img
-            src={service.image}
+            src={service.srImg}
             className="card-img-top services-icons"
             alt="services_icons"
           />
         </div>
         <div className="card-body">
-          <h5 className="card-title">{service.title}</h5>
-          <p className="card-text">{service.description}</p>
+          <h5 className="card-title">{service.srName}</h5>
+          <p className="card-text">{service.srDetails}</p>
         </div>
-                <h6>Cost: ${service.price}</h6>
+                <h6>Cost: ${service.srPrice}</h6>
       </div>
     </div>
   );

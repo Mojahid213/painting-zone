@@ -1,0 +1,15 @@
+.addService-form{
+    min-width: 350px;
+    width: 600px;
+    margin-top: 20px;
+    margin: auto;
+    background: rgb(209, 238, 228);
+}
+.service_price{
+width: 60;
+margin: 0 5px;
+}
+.service_image{
+    width: 35;
+    margin: 0 5px;
+}
