@@ -33,13 +33,13 @@ const Navbar = () => {
             <Link class="nav-link text-dark text-center" aria-current="page" to="/home">
               Home
             </Link>
-            <Link class="nav-link text-dark text-center" to="/#">
+            <Link class="nav-link text-dark text-center" to="/">
               About Us
             </Link>
-            <Link class="nav-link text-dark text-center" to="/#">
+            <Link class="nav-link text-dark text-center" to="/">
               Our Team
             </Link>
-            <Link class="nav-link text-dark text-center" to="/#">
+            <Link class="nav-link text-dark text-center" to="/">
               Contact
             </Link>
 

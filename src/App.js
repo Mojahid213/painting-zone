@@ -14,6 +14,7 @@ import Reviews from './Components/Bookings/Reviews/Reviews';
 import Orders from './Components/Dashboard/Orders/Orders';
 import Addservice from './Components/Dashboard/AddService/Addservice';
 import ManageService from './Components/Dashboard/ManageService/ManageService';
+import NoMatch from './Components/NoMatch/NoMatch';
 
 
 export const userContext = createContext();
@@ -35,15 +36,15 @@ const[user,setUser] = useState({
          <Route path="/home">
             <Home></Home>
          </Route>
-          <Route path="/dashboard/orders">
+          <PrivateRoute path="/dashboard/orders">
             <Orders></Orders>
-          </Route>
-          <Route path="/dashboard/addservice">
+          </PrivateRoute>
+          <PrivateRoute path="/dashboard/addservice">
             <Addservice></Addservice>
-          </Route>
-          <Route path="/dashboard/menageservice">
+          </PrivateRoute>
+          <PrivateRoute path="/dashboard/menageservice">
             <ManageService></ManageService>
-          </Route>
+          </PrivateRoute>
           <PrivateRoute path="/booking">
             <Booking></Booking>
           </PrivateRoute>
@@ -55,6 +56,9 @@ const[user,setUser] = useState({
           </PrivateRoute>
          <Route path="/login">
            <Login></Login>
+         </Route>
+         <Route path="*">
+          <NoMatch></NoMatch>
          </Route>
        </Switch>
      </Router>
