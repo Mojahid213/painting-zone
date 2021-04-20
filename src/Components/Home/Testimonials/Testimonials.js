@@ -6,7 +6,7 @@ import "./Testimonials.css"
 const Testimonials = () => {
     const[allTestimoni,setAllTestimoni] = useState([]);
     useEffect(()=>{
-        fetch("http://localhost:5050/getTestimonial")
+        fetch("https://calm-springs-36524.herokuapp.com/getTestimonial")
         .then(res => res.json())
         .then(data => setAllTestimoni(data))
     },[])

@@ -46,7 +46,7 @@ const Addservice = () => {
       srImg:theImg
     }
     
-    fetch("http://localhost:5050/addnewservice",{
+    fetch("https://calm-springs-36524.herokuapp.com/addnewservice",{
       method:'POST',
       headers:{
         'content-type':'application/json'

@@ -16,7 +16,7 @@ const AllBokings = () => {
    const[bookings,setBookings] = useState([]);
 
    useEffect(()=>{
-    fetch("http://localhost:5050/getBookings?email="+user.email)
+    fetch("https://calm-springs-36524.herokuapp.com/getBookings?email="+user.email)
     .then(res => res.json())
     .then(data => setBookings(data))
    },[])

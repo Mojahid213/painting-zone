@@ -13,7 +13,7 @@ const ManageService = () => {
   const [allservices, setAllServices] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5050/getServices")
+    fetch("https://calm-springs-36524.herokuapp.com/getServices")
       .then((res) => res.json())
       .then((data) => setAllServices(data));
   }, []);

@@ -26,7 +26,7 @@ const Reviews = () => {
     data.name = user.name;
     data.photo = user.photo
 
-    fetch("http://localhost:5050/postReview",{
+    fetch("https://calm-springs-36524.herokuapp.com/postReview",{
         method:'POST',
         headers:{
             'content-type':'application/json'

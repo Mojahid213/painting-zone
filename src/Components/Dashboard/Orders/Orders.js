@@ -12,7 +12,7 @@ import OrderedItems from "../OrderedItems/OrderedItems";
 const Orders = () => {
   const[orders,setOrders] = useState([]);
   useEffect(()=>{
-      fetch("http://localhost:5050/getOrders")
+      fetch("https://calm-springs-36524.herokuapp.com/getOrders")
       .then(res => res.json())
       .then(data => setOrders(data))
   },[])

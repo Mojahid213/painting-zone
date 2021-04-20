@@ -5,7 +5,7 @@ const AllServices = ({service}) => {
 
     //Delete services
     const handleDeleteBtn = () =>{
-       fetch(`http://localhost:5050/deleteServices/${service._id}`,{
+       fetch(`https://calm-springs-36524.herokuapp.com/deleteServices/${service._id}`,{
            method:'DELETE',
            headers:{
                'content-type':'application/json'

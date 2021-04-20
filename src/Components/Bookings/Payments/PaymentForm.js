@@ -50,7 +50,7 @@ const PaymentForm = () => {
       setPaymentError("");
       
       //Sending data to database
-      fetch("http://localhost:5050/addBookings",{
+      fetch("https://calm-springs-36524.herokuapp.com/addBookings",{
         method:'POST',
         headers:{
           'content-type':'application/json'
