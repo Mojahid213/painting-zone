@@ -7,11 +7,13 @@ import {
 import Home from './Components/Home/Home/Home';
 import Login from './Components/Login/Login';
 import { createContext, useState } from 'react';
-import Dashobard from './Components/Dashboard/Dashboard/Dashobard';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute'
 import Booking from './Components/Bookings/Bookings/Booking';
 import AllBokings from './Components/Bookings/AllBokings/AllBokings';
 import Reviews from './Components/Bookings/Reviews/Reviews';
+import Orders from './Components/Dashboard/Orders/Orders';
+import Addservice from './Components/Dashboard/AddService/Addservice';
+import ManageService from './Components/Dashboard/ManageService/ManageService';
 
 
 export const userContext = createContext();
@@ -33,18 +35,24 @@ const[user,setUser] = useState({
          <Route path="/home">
             <Home></Home>
          </Route>
-          <PrivateRoute path="/dashboard">
-              <Dashobard></Dashobard>
-          </PrivateRoute>
-          <Route path="/booking">
+          <Route path="/dashboard/orders">
+            <Orders></Orders>
+          </Route>
+          <Route path="/dashboard/addservice">
+            <Addservice></Addservice>
+          </Route>
+          <Route path="/dashboard/menageservice">
+            <ManageService></ManageService>
+          </Route>
+          <PrivateRoute path="/booking">
             <Booking></Booking>
-          </Route>
-          <Route path="/allbokings">
+          </PrivateRoute>
+          <PrivateRoute path="/allbokings">
             <AllBokings></AllBokings>
-          </Route>
-          <Route path="/reviews">
+          </PrivateRoute>
+          <PrivateRoute path="/reviews">
               <Reviews></Reviews>
-          </Route>
+          </PrivateRoute>
          <Route path="/login">
            <Login></Login>
          </Route>

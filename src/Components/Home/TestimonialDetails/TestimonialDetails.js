@@ -8,7 +8,7 @@ const TestimonialDetails = ({ detail }) => {
        <div className="card-header border-0">
             <div className="d-flex align-items-center">
                <div className="mx-1">
-                   {/* <img src={imgg} style={{width:'35px',borderRadius:'50%'}} alt=""/> */}
+                   <img src={detail.photo} style={{width:'35px',borderRadius:'50%'}} alt=""/>
                 </div> 
                 <div className="mx-1">
                     <span style={{fontWeight:'bold', fontSize:'18px',display:'block'}}>{detail.name}</span>
@@ -19,7 +19,7 @@ const TestimonialDetails = ({ detail }) => {
         <div class="card-body">
           <p class="card-text">
             {
-                detail.details
+                detail.descriptioin
             }
           </p>
         </div>

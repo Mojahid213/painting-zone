@@ -1,26 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import TestimonialDetails from '../TestimonialDetails/TestimonialDetails';
 import "./Testimonials.css"
 
-const allTestimoni = [
-    {
-        name:'Mojahid',
-        profession:'student',
-        details:'Their painting service is really really good. Both the quality of their product and their skill was really nice'
-    },
-    {
-        name:'Jaber',
-        profession:'CEO, Mr.Jet',
-        details:'Their painting service is really really good. Both the quality of their product and their skill was really nice'
-    },
-    {
-        name:'Fahmida',
-        profession:'manager, BD Group',
-        details:'Their painting service is really really good. Both the quality of their product and their skill was really nice'
-    },
-]
 
 const Testimonials = () => {
+    const[allTestimoni,setAllTestimoni] = useState([]);
+    useEffect(()=>{
+        fetch("http://localhost:5050/getTestimonial")
+        .then(res => res.json())
+        .then(data => setAllTestimoni(data))
+    },[])
     return (
         <div className="testimonial-main">
             <div className="text-center mb-5">

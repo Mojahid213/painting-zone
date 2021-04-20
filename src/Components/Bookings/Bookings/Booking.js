@@ -24,13 +24,7 @@ const Booking = () => {
         >
           <CDBSidebar textColor="#fff" backgroundColor="#333">
             <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
-              <a
-                href="/"
-                className="text-decoration-none"
-                style={{ color: "inherit" }}
-              >
                 ORDER SUMMERY
-              </a>
             </CDBSidebarHeader>
 
             <CDBSidebarContent className="sidebar-content">

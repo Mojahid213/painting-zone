@@ -44,7 +44,7 @@ const Navbar = () => {
             </Link>
 
             {user.isSignedIn ?
-             <Link class="nav-link text-dark text-center" to="/dashboard">
+             <Link class="nav-link text-dark text-center" to="/dashboard/orders">
              Dashboard
            </Link>
             :<button onClick={handleLoginBtn} className="btn btn-success">
