@@ -16,7 +16,12 @@ const AllBokings = () => {
    const[bookings,setBookings] = useState([]);
 
    useEffect(()=>{
-    fetch("https://calm-springs-36524.herokuapp.com/getBookings?email="+user.email)
+    fetch("https://calm-springs-36524.herokuapp.com/getBookings?email="+user.email,{
+      headers:{
+        'authorization': `Bearer ${sessionStorage.getItem('token')}`,
+        'content-type':'application/json'
+      }
+    })
     .then(res => res.json())
     .then(data => setBookings(data))
    },[])

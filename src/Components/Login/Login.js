@@ -36,6 +36,7 @@ const Login = () => {
             newLogedInuser.photo = photoURL;
             newLogedInuser.isSignedIn = true;
             setlogedInUser(newLogedInuser);
+            setJwtToken();
             history.replace(from);
         }).catch((error) => {
             // Handle Errors here.
@@ -44,7 +45,14 @@ const Login = () => {
             console.log(errorCode,errorMessage);
         });
     }
-    console.log(logedInUser);
+    const setJwtToken = () =>{
+        firebase.auth().currentUser.getIdToken(/* forceRefresh */ true)
+        .then(function(idToken) {
+            sessionStorage.setItem('token',idToken)
+          }).catch(function(error) {
+            console.log(error);
+          });
+    }
     return (
         <div>
             <Navbar></Navbar>
